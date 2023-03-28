@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* border-bottom usei para fazer o "gramado" do game, e o background para fazer o fundo do game(céu) */
+.game-board {
+width: 100%;
+height: 500px;
+border-bottom: 15px solid rgb(37, 173, 37);
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+ button{ 
+    margin-top: 30px;
+    margin-left: 570px;
+    padding: 30px;
+    border-radius: 40px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: arial black;
+   
+}
+
+
+
+.pipe {
+    
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear; 
+    
+}
+
+.ave{
+
+    position: absolute;
+    width: 80px;
+    animation: ave-animation 15s infinite linear;
+}
+
+
+
+.mario{
+    width: 90px;
+    position: absolute;
+    bottom: 0px;
+   
+}
+
+
+.jump{
+
+    animation: jump 500ms ease-out;
+}
+/*  "clouds" representa as nuvens n  */
+.clouds {
+    
+    position: absolute;
+    width: 300px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+/* animação do cano verde: pipe-animation
+    o "from" indica onde começa, rigth: -80px para ele vim de fora da tela 
+    e o "to" indica onde termina rigth: 100% */
+
+@keyframes pipe-animation {
+   from {
+        right: -80px;
+   }
+   to {
+    right: 100%;
+   }
+
+}
+
+
+/* pulo do Sonic no css keyframes: Keyframes são a base de Animações CSS. 
+Eles definem como a animação será em cada estágio de sua linha do tempo: inicio 0, meio 180px e final 0 */
+@keyframes jump {
+
+    0%{
+        bottom: 0;      
+}
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+} 
+
+@keyframes clouds-animation {
+    
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes ave-animation {
+
+    from {
+        right: -550px;
+   }
+   to {
+    right: 100%;
+   }
+
+
+}
+
