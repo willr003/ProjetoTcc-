@@ -32,8 +32,8 @@ if (pipeposition <= 100 && pipeposition >0 && marioposition < 80) {
     mario.style.animation = 'none';
     mario.style.bottom = `${marioposition}px`;
 
-    mario.src = ' ./images/oversonic.png';
-    mario.style.width= '75px'
+    mario.src = ' /images/oversonic.png';
+    mario.style.width= '80px'
     
     clearInterval(loop);
 
@@ -43,7 +43,10 @@ if (pipeposition <= 100 && pipeposition >0 && marioposition < 80) {
     
 }, 10);
 
+
+
 /* javascript função keydown: dispara quando qualquer tecla é pressionada. que nesse caso qualquer tecla
 pressionada dispara o pulo do sonic */
-document.addEventListener('keydown', jump);
 
+document.addEventListener('keydown', jump);
+  
